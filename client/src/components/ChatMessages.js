@@ -1,13 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import moment from "moment";
 
 function ChatMessages({ currentUser, currentChat, messages }) {
     const scrollToRef = useRef(null);
     const scrollToBottom = () => {
         scrollToRef.current?.scrollIntoView();
     };
-
+    console.log(messages);
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
@@ -24,7 +25,7 @@ function ChatMessages({ currentUser, currentChat, messages }) {
                         }`}
                     >
                         <div ref={scrollToRef} className="message">
-                            <span>4:15</span>
+                            <span>{moment(msg.date).format("LLL")}</span>
                             {msg.message.messageType === "text" ? (
                                 <p>{msg.message.text}</p>
                             ) : (

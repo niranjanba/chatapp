@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c1ea7719-5312-46de-99af-7803eda500da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ChatMessages.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ChatMessages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/SetAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/SetAvatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/messagesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/messagesController.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="29Pu0uWfrY5vfrunuGEk8ZdhJqJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c1ea7719-5312-46de-99af-7803eda500da" name="Default Changelist" comment="" />
+      <created>1653026824515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653026824515</updated>
+    </task>
+    <servers />
+  </component>
+</project>

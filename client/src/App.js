@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import SetAvatar from "./pages/SetAvatar";
 import ChatPage from "./pages/ChatPage";
 import { GetSocket } from "./context/chat/ChatState";
+import EditProfile from "./pages/EditProfile";
 function App() {
     return (
         <GetSocket>
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/setAvatar" element={<SetAvatar />} />
+                    <Route path="/edit-profile" element={<EditProfile />} />
                     <Route path="/" element={<ChatPage />} />
                 </Routes>
             </BrowserRouter>

@@ -31,6 +31,7 @@ module.exports.getMessage = async (req, res, next) => {
             return {
                 self: msg.sender.toString() === from,
                 message: msg.message,
+                date: msg.updatedAt,
             };
         });
         if (messages) {

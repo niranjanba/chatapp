@@ -6,3 +6,4 @@ export const GetAllUsers = `${host}/api/auth/getAllUsers`;
 export const AddMessages = `${host}/api/chat/add-message`;
 export const GetMessages = `${host}/api/chat/get-messages`;
 export const GetAllFriends = `${host}/api/auth/get-friends`;
+export const UpdateUserProfile = `${host}/api/auth/update-user-profile`;

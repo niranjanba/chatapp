@@ -168,7 +168,7 @@ const FormContainer = styled.div`
         transition: 0.5s ease-in-out;
         color: white;
         &:hover {
-            background: #40bdd3;
+            background: #466ac2;
         }
     }
     span {

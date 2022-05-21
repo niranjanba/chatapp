@@ -194,3 +194,22 @@ module.exports.getAllFriends = async (req, res, next) => {
         next(error);
     }
 };
+
+//UPDATE USER PROFILE
+module.exports.updateUserProfile = async (req, res, next) => {
+    try {
+        const { name, image } = req.body;
+        const { id } = req.params;
+        const user = await Users.findByIdAndUpdate(
+            id,
+            {
+                name: name,
+                avatarImage: image,
+            },
+            { new: true }
+        );
+        res.json({ message: "updated user", user: user, status: true });
+    } catch (error) {
+        next(error);
+    }
+};

@@ -4,6 +4,8 @@ import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { HiOutlineUserAdd } from "react-icons/hi";
 import { chatContext, socketContext } from "../context/chat/chatContext";
 import axios from "axios";
+import { FaUserEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Contacts({ contacts, currentUser, changeChat }) {
     const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -12,6 +14,8 @@ function Contacts({ contacts, currentUser, changeChat }) {
     const [friends, setFriends] = useState([]);
     const [isShowResults, setIsShowResults] = useState(false);
     const [searchResults, setSearchResults] = useState([]);
+
+    const navigate = useNavigate();
 
     const socket = useContext(socketContext);
 
@@ -97,6 +101,10 @@ function Contacts({ contacts, currentUser, changeChat }) {
                             alt="Avatar"
                         />
                         <h4>{currentUser.name}</h4>
+                        <FaUserEdit
+                            className="edit-user"
+                            onClick={() => navigate("/edit-profile")}
+                        />
                     </div>
                     <div className="search">
                         <div className="searchField">
@@ -209,6 +217,11 @@ const Container = styled.div`
         text-transform: capitalize;
         img {
             width: 3rem;
+        }
+        .edit-user {
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     .search {

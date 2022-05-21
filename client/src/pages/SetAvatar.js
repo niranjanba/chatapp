@@ -50,7 +50,6 @@ function SetAvatar() {
         const { data } = await axios.post(`${SetAvatarRoute}/${user._id}`, {
             image: avatars[selectedAvatar],
         });
-        console.log(data);
         if (data.status) {
             user.isAvatarImageSet = true;
             user.avatarImage = data.user.avatarImage;
@@ -61,6 +60,7 @@ function SetAvatar() {
             toast.error("Error setting avatar. Try again", toastOption);
         }
     };
+
     return (
         <>
             {isLoading ? (
