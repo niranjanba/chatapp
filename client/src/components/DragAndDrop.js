@@ -10,11 +10,13 @@ function DragAndDrop({ setSelectedAvatar, setIsUploadProfile }) {
     const onDrop = () => dragRef.current.classList.remove("dragover");
 
     const handleChange = (e) => {
+        let arr = [];
         const file = e.target.files[0];
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-            setSelectedAvatar(reader.result.split(";")[1]);
+            console.log(reader.result);
+            setSelectedAvatar(reader.result.split(",")[1]);
             setIsUploadProfile(false);
         };
     };
@@ -39,7 +41,7 @@ function DragAndDrop({ setSelectedAvatar, setIsUploadProfile }) {
                     <input
                         type="file"
                         defaultValue=""
-                        accept="image/png, image/jpeg"
+                        accept="image/png, image/jpeg, image/svg"
                         onChange={handleChange}
                     />
                 </div>

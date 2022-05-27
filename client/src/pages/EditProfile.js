@@ -49,26 +49,8 @@ function EditProfile() {
         autoClose: 3000,
         position: "top-right",
     };
+    console.log(selectedAvatar);
 
-    const setProfilePicture = async () => {
-        if (selectedAvatar === undefined) {
-            toast.error("Please select an avatar", toastOption);
-            return;
-        }
-        const user = JSON.parse(localStorage.getItem("chat-app-user"));
-        const { data } = await axios.post(`${SetAvatarRoute}/${user._id}`, {
-            image: avatars[selectedAvatar],
-        });
-        if (data.status) {
-            user.isAvatarImageSet = true;
-            user.avatarImage = data.user.avatarImage;
-            const stringifiedUser = JSON.stringify(user);
-            localStorage.setItem("chat-app-user", stringifiedUser);
-            navigate("/");
-        } else {
-            toast.error("Error setting avatar. Try again", toastOption);
-        }
-    };
     const updateUserProfile = async (e) => {
         const { data } = await axios.patch(`${UpdateUserProfile}/${user._id}`, {
             name: userName,
@@ -127,7 +109,10 @@ function EditProfile() {
                             })
                         ) : (
                             <div className="c-avatar">
-                                <img src={customAvatar} alt="Custom avatar" />
+                                <img
+                                    src={`data:image/svg+xml;base64,${customAvatar}`}
+                                    alt="Custom avatar"
+                                />
                             </div>
                         )}
                     </div>

@@ -88,6 +88,9 @@ const Container = styled.div`
                 top: -326px;
                 left: 10px;
             }
+            &:hover {
+                cursor: pointer;
+            }
         }
         .textField {
             display: flex;
@@ -126,6 +129,11 @@ const Container = styled.div`
                 color: white;
                 cursor: pointer;
             }
+        }
+    }
+    @media (max-width: 756px) {
+        .inputContainer {
+            grid-template-columns: 5% 70% 25%;
         }
     }
 `;

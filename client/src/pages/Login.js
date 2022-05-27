@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { LoginRoute } from "../utils/APIRoutes";
 
-function Register() {
+function LogIn() {
     const navigate = useNavigate();
 
     const [values, setValues] = useState({
@@ -15,9 +15,8 @@ function Register() {
     });
 
     useEffect(() => {
-        if (localStorage.getItem("chat-app-user") != undefined) {
-            console.log(localStorage.getItem("chat-app-user"));
-            // navigate("/");
+        if (localStorage.getItem("chat-app-user")) {
+            navigate("/");
         }
     }, []);
 
@@ -160,4 +159,4 @@ const FormContainer = styled.div`
     }
 `;
 
-export default Register;
+export default LogIn;

@@ -11,10 +11,14 @@ function App() {
         <GetSocket>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/setAvatar" element={<SetAvatar />} />
-                    <Route path="/edit-profile" element={<EditProfile />} />
+                    <Route path="/register" element={<Register />} exact />
+                    <Route path="/login" element={<Login />} exact />
+                    <Route path="/setAvatar" element={<SetAvatar />} exact />
+                    <Route
+                        path="/edit-profile"
+                        element={<EditProfile />}
+                        exact
+                    />
                     <Route path="/" element={<ChatPage />} />
                 </Routes>
             </BrowserRouter>

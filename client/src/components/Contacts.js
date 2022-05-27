@@ -392,6 +392,85 @@ const Container = styled.div`
             }
         }
     }
+    @media (max-width: 768px) {
+        .currentUser {
+            gap: 0.5rem;
+            img {
+                width: 2rem;
+            }
+            h4 {
+                font-size: 0.8rem;
+            }
+            .edit-user {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .contacts {
+            gap: 0.5rem;
+            .chats {
+                width: 100%;
+                height: 70vh;
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 0.2rem;
+                    height: 1rem;
+                    &-thumb {
+                        background-color: #c0e1fb;
+                        width: 0.1rem;
+                        border-radius: 1rem;
+                    }
+                }
+                .nofriends {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    height: 100%;
+                    text-align: center;
+                }
+                .contact {
+                    grid-template-columns: 20% 70% 10%;
+                    gap: 0.5rem;
+                    .avatar {
+                        img {
+                            height: 2rem;
+                        }
+                    }
+                    .username {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        color: RGB(75, 125, 250);
+                        font-weight: 600;
+                        h5 {
+                            text-transform: capitalize;
+                            font-size: 0.6rem;
+                        }
+                    }
+                    .new-chat {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 1.5rem;
+                        background-color: red;
+                    }
+                }
+                .selected {
+                    .username {
+                        h5 {
+                            color: white;
+                        }
+                    }
+                    background-color: #659cff;
+                }
+            }
+        }
+        .search .searchField input {
+            font-size: 0.5rem;
+        }
+    }
 `;
 
 export default Contacts;
